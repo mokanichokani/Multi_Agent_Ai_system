@@ -1,0 +1,20 @@
+{
+    "invoice_id": "INV-2024-001",
+    "customer_name": "Tech Solutions Ltd.",
+    "invoice_date": "2024-07-15",
+    "due_date": "2024-08-14",
+    "items": [
+      {
+        "name": "Cloud Server Hosting - Basic",
+        "quantity": 1,
+        "unit_price": 50.00
+      },
+      {
+        "name": "Domain Registration (.com)",
+        "quantity": 2,
+        "unit_price": 15.00
+      }
+    ],
+    "total_amount": 80.00,
+    "currency": "USD"
+  }

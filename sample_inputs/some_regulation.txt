@@ -1,0 +1,6 @@
+Subject: New Data Privacy Regulation Update - GDPR Compliance
+
+Effective January 1st, 2025, all companies handling EU citizen data must adhere to the updated General Data Protection Regulation (GDPR) addendum 7.2.
+This includes stricter consent management protocols and mandatory data breach notifications within 48 hours.
+Non-compliance can result in fines up to 4% of global annual turnover.
+Internal training sessions will be scheduled. Please review the attached full document.

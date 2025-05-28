@@ -1,0 +1,12 @@
+From: jane.smith@client.com
+To: support@mycompany.com
+Subject: Urgent: Issue with recent order #12345
+
+Hi Support,
+
+I am writing to complain about my recent order #12345. The product arrived damaged, and it's not functioning as expected.
+This is extremely frustrating as I needed it for an important project.
+I demand a replacement or a full refund immediately! Please contact me on 555-123-4567 to resolve this. This is unacceptable.
+
+Regards,
+Jane Smith

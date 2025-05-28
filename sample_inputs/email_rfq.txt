@@ -1,0 +1,15 @@
+From: john.doe@example.com
+To: sales@mycompany.com
+Subject: RFQ - Bulk Order of Widgets
+
+Dear Sales Team,
+
+We are interested in placing a bulk order for your Model X Widgets.
+Could you please provide a quotation for 1000 units?
+We would also like to know the estimated delivery time to Zip Code 90210.
+Our deadline for receiving quotes is next Friday, EOD.
+
+Thanks,
+John Doe
+Procurement Manager
+ABC Corp
