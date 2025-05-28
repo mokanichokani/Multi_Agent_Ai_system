@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# Streamlit and app logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Shared memory/log files
+shared_memory_log.json
+
+# IDE/project files
+.vscode/
+.idea/ 
