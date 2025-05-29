@@ -1,0 +1,270 @@
+[
+    {
+        "log_id": "f86d7856-39b3-4783-afb8-3a11af3b782e",
+        "timestamp": "2025-05-29T16:11:50.174581",
+        "thread_id": "5c0048dc-1951-4875-afd5-efa3e972da94",
+        "source_identifier": "email_rfq.txt",
+        "source_type": "file_upload_text_email",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "21bda22d-2d11-4501-946d-db631a4d657f",
+        "timestamp": "2025-05-29T16:11:59.868052",
+        "thread_id": "5c0048dc-1951-4875-afd5-efa3e972da94",
+        "source_identifier": "email_rfq.txt",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "john.doe@example.com",
+            "intent": "Other",
+            "urgency": "Medium",
+            "crm_summary": "**CRM Summary:**\n\n**Main Topic/Request:** Request for Quotation (RFQ) for a bulk order of 1000 Model X Widgets, including estimated delivery time.\n\n**Key Entities:**\n*   **Contact:** John Doe (Procurement Manager)\n*   **Company:** ABC Corp\n*   **Product:** Model X Widgets\n\n**Action Items/Deadlines:**\n*   **Action:** Provide quotation for 1000 units and estimated delivery time to Zip Code 90210.\n*   **Deadline:** Quote must be received by next Friday, EOD.",
+            "original_content_preview": "From: john.doe@example.com\nTo: sales@mycompany.com\nSubject: RFQ - Bulk Order of Widgets\n\nDear Sales Team,\n\nWe are interested in placing a bulk order for your Model X Widgets.\nCould you please provide ..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "1b020ef7-20f3-4018-92c6-ad5085a7227a",
+        "timestamp": "2025-05-29T16:12:01.287357",
+        "thread_id": "1e62cecc-b17f-437d-9e4a-da4b8c0ee6ad",
+        "source_identifier": "invoice_data.json",
+        "source_type": "file_upload_json",
+        "classified_format": "JSON",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "b0a1659c-93a2-4fc3-a246-257f3a160b69",
+        "timestamp": "2025-05-29T16:12:01.289243",
+        "thread_id": "1e62cecc-b17f-437d-9e4a-da4b8c0ee6ad",
+        "source_identifier": "invoice_data.json",
+        "source_type": "json_payload",
+        "classified_format": "JSON",
+        "classified_intent": "Other",
+        "agent_processed": "JSONAgent",
+        "extracted_data": {
+            "original_data_preview": {
+                "invoice_id": "INV-2024-001",
+                "customer_name": "Tech Solutions Ltd.",
+                "invoice_date": "2024-07-15",
+                "due_date": "2024-08-14",
+                "items": "[{'name': 'Cloud Server Hosting - Basic', 'quantity': 1, 'unit_price': 50.0}, {'name': 'Domain Regis...",
+                "total_amount": 80.0,
+                "currency": "USD",
+                "_anomalies": [
+                    "No specific schema defined for intent 'Other'. Passing through data."
+                ]
+            },
+            "reformatted_data": {
+                "invoice_id": "INV-2024-001",
+                "customer_name": "Tech Solutions Ltd.",
+                "invoice_date": "2024-07-15",
+                "due_date": "2024-08-14",
+                "items": [
+                    {
+                        "name": "Cloud Server Hosting - Basic",
+                        "quantity": 1,
+                        "unit_price": 50.0
+                    },
+                    {
+                        "name": "Domain Registration (.com)",
+                        "quantity": 2,
+                        "unit_price": 15.0
+                    }
+                ],
+                "total_amount": 80.0,
+                "currency": "USD",
+                "_anomalies": [
+                    "No specific schema defined for intent 'Other'. Passing through data."
+                ]
+            },
+            "schema_applied": "Other",
+            "anomalies_detected": [
+                "No specific schema defined for intent 'Other'. Passing through data."
+            ]
+        },
+        "notes": "Processed by JSONAgent."
+    },
+    {
+        "log_id": "4afae942-4824-401e-b7e6-920197e031a4",
+        "timestamp": "2025-05-29T16:12:03.707726",
+        "thread_id": "c746bdb6-f00f-4ae0-9590-739cd2486f04",
+        "source_identifier": "email_complaint.txt",
+        "source_type": "file_upload_text_email",
+        "classified_format": "Email",
+        "classified_intent": "Complaint",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "7e1bbb26-3d2e-430d-8a4d-771e9c7b6d3c",
+        "timestamp": "2025-05-29T16:12:12.160319",
+        "thread_id": "c746bdb6-f00f-4ae0-9590-739cd2486f04",
+        "source_identifier": "email_complaint.txt",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Complaint",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "jane.smith@client.com",
+            "intent": "Complaint",
+            "urgency": "High",
+            "crm_summary": "CRM Summary:\n\n*   **Main topic/request:** Customer Jane Smith is complaining about order #12345, stating the product arrived damaged and is not functioning. She demands an immediate replacement or a full refund.\n*   **Key entities mentioned:**\n    *   **Customer:** Jane Smith (jane.smith@client.com)\n    *   **Recipient/Company:** MyCompany (support@mycompany.com)\n    *   **Order:** #12345\n    *   **Product:** Unspecified product from order #12345\n*   **Explicit action items or deadlines:**\n    *   **Action:** Contact Jane Smith to resolve the issue.\n    *   **Contact:** 555-123-4567\n    *   **Deadline:** Immediate resolution (replacement/refund).",
+            "original_content_preview": "From: jane.smith@client.com\nTo: support@mycompany.com\nSubject: Urgent: Issue with recent order #12345\n\nHi Support,\n\nI am writing to complain about my recent order #12345. The product arrived damaged, ..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "3666c88e-df5f-4f71-b673-5a834da45108",
+        "timestamp": "2025-05-29T16:12:15.361048",
+        "thread_id": "108f5d72-f3b7-46cb-85b7-ffaafa5bc2bb",
+        "source_identifier": "some_regulation.txt",
+        "source_type": "file_upload_text_document",
+        "classified_format": "Text/Email",
+        "classified_intent": "Regulation",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "c5905d71-bea9-4c2f-b82b-a6198553373e",
+        "timestamp": "2025-05-29T16:12:43.070989",
+        "thread_id": "e5da63ab-4e8c-44fa-a6c8-38f330ad0a45",
+        "source_identifier": "manual_text_entry",
+        "source_type": "streamlit_raw_text",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "d45cfadd-0662-42d6-8d3a-d8b9ad79d79f",
+        "timestamp": "2025-05-29T16:12:44.652520",
+        "thread_id": "e5da63ab-4e8c-44fa-a6c8-38f330ad0a45",
+        "source_identifier": "manual_text_entry",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "jane.smith@client.com",
+            "intent": "Other",
+            "urgency": "Medium",
+            "crm_summary": "Error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 10\n}\n, links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, retry_delay {\n  seconds: 13\n}\n]",
+            "original_content_preview": "From: jane.smith@client.com\nTo: support@mycompany.com\nSubject: Urgent: Issue with recent order #12345\n\nHi Support,\n\nI am writing to complain about my recent order #12345. The product arrived damaged, ..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "6656ee5d-148e-4e2a-a6bc-fe39b35fde18",
+        "timestamp": "2025-05-29T16:12:50.296680",
+        "thread_id": "1ee18baf-cdd2-4069-b7be-b5d0c966c72b",
+        "source_identifier": "manual_text_entry",
+        "source_type": "streamlit_raw_text",
+        "classified_format": "Email",
+        "classified_intent": "Complaint",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "8601d86b-10c5-4e69-8273-c8d0a56ef7bb",
+        "timestamp": "2025-05-29T16:12:58.309862",
+        "thread_id": "1ee18baf-cdd2-4069-b7be-b5d0c966c72b",
+        "source_identifier": "manual_text_entry",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Complaint",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "jane.smith@client.com",
+            "intent": "Complaint",
+            "urgency": "Medium",
+            "crm_summary": "CRM Summary:\n\n*   **Main Topic/Request:** Complaint regarding Order #12345. Customer received a damaged and non-functional product and demands an immediate replacement or full refund.\n*   **Key Entities:**\n    *   **Customer:** Jane Smith (jane.smith@client.com)\n    *   **Order:** #12345\n    *   **Product:** Unspecified product from Order #12345\n    *   **Company:** MyCompany (recipient of complaint)\n*   **Explicit Action Items/Deadlines:**\n    *   **Action:** Contact Jane Smith to resolve the issue.\n    *   **Contact:** 555-123-4567\n    *   **Deadline:** Resolution (replacement/refund) requested \"immediately.\"",
+            "original_content_preview": "From: jane.smith@client.com\nTo: support@mycompany.com\nSubject: Urgent: Issue with recent order #12345\n\nHi Support,\n\nI am writing to complain about my recent order #12345. The product arrived damaged, ..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "17a70adc-e65e-4005-9781-3754ca1b5786",
+        "timestamp": "2025-05-29T16:13:25.485013",
+        "thread_id": "e9e922ba-37c2-43cd-be4e-f78dca06f3ad",
+        "source_identifier": "Aakash_Mokani_Resume_Latest_101 (1).pdf",
+        "source_type": "streamlit_upload",
+        "classified_format": "PDF",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "4cb22dcb-f98c-4818-965e-8496b64dec15",
+        "timestamp": "2025-05-29T16:13:35.203838",
+        "thread_id": "e9e922ba-37c2-43cd-be4e-f78dca06f3ad",
+        "source_identifier": "Aakash_Mokani_Resume_Latest_101 (1).pdf",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "mokaniaakash@gmail.com",
+            "intent": "Other",
+            "urgency": "Low",
+            "crm_summary": "CRM Summary:\n\n*   **Main topic/request:** This content is a resume/CV for Aakash Mokani, detailing their education, technical skills, projects, and work experience. It implicitly serves as an application or inquiry for a potential role.\n*   **Key entities mentioned:**\n    *   **Person:** Aakash Mokani\n    *   **Organizations:** N.M.F College of Commerce and Science, Sardar Patel Institute of Technology (SPIT), Women in Engineering (WIE) SPIT.\n    *   **Key Technologies/Skills:** JavaScript, HTML/CSS, Python, SQL (PostGres), React, Node.js, Next.js, FastAPI, Git, Visual Studio, Grafana, Machine Learning, LGTM Stack (Loki, Grafana, Tempo, Mimir), Supabase, Agentic AI, Tailwind CSS, Clerk, WebRTC, Stream SDK, Monaco Editor.\n*   **Explicit action items or deadlines:** None explicitly stated in the provided content.",
+            "original_content_preview": "Aakash Mokani\n+91 93243-79778 |mokaniaakash@gmail.com |Linkedin |github.com/mokanichokani\nEducation\nN.M.F College of Commerce and Science Kandivali, Mumbai\nHSC Science June. 2020 \u2013 May 2022\nSardar Pat..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "7f1a7c29-4dfd-4923-9040-d5af1cee5c77",
+        "timestamp": "2025-05-29T16:14:17.318495",
+        "thread_id": "f3a39d06-9010-40a6-908d-026850ca599b",
+        "source_identifier": "Email: New assignment: \"29th June 2020\" (from \"Jinal Gangar (Classroom)\" <no-reply+dc6558ac@classroom.google.com>)",
+        "source_type": "automated_email_ingestion",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    },
+    {
+        "log_id": "b803eea0-50b7-49dc-a3e0-8a37188b5977",
+        "timestamp": "2025-05-29T16:14:25.544043",
+        "thread_id": "f3a39d06-9010-40a6-908d-026850ca599b",
+        "source_identifier": "Email: New assignment: \"29th June 2020\" (from \"Jinal Gangar (Classroom)\" <no-reply+dc6558ac@classroom.google.com>)",
+        "source_type": "email_content",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "EmailAgent",
+        "extracted_data": {
+            "sender": "\"Jinal Gangar (Classroom)\" <no-reply+dc6558ac@classroom.google.com>",
+            "intent": "Other",
+            "urgency": "High",
+            "crm_summary": "CRM Summary:\n\n*   **Main Topic/Request:** Notification of a new assignment posted in Google Classroom.\n*   **Key Entities:**\n    *   **Recipient:** Aakash\n    *   **Sender/Poster:** Jinal Gangar\n    *   **Course:** BO XI ELITE E2\n    *   **Assignment Name:** \"29th June 2020\"\n    *   **Platform:** Google Classroom\n*   **Action Items/Deadlines:**\n    *   **Action:** Review and complete the assignment.\n    *   **Due Date:** June 30th.",
+            "original_content_preview": "Subject: New assignment: \"29th June 2020\"\n\nFrom: \"Jinal Gangar (Classroom)\" <no-reply+dc6558ac@classroom.google.com>\n\n\r\nDear Aakash,\r\nJinal Gangar posted a new assignment in BO XI ELITE E2  \r\n<https:/..."
+        },
+        "notes": "Processed by EmailAgent."
+    },
+    {
+        "log_id": "17820dd0-af72-4ddd-a497-0c4ec15d8a96",
+        "timestamp": "2025-05-29T16:14:30.653693",
+        "thread_id": "81469946-5a45-4390-a039-3ef67f2c89ba",
+        "source_identifier": "Email: Due tomorrow: '29th June 2020' (from \"Jinal Gangar (Classroom)\" <no-reply+dc6558ac@classroom.google.com>)",
+        "source_type": "automated_email_ingestion",
+        "classified_format": "Email",
+        "classified_intent": "Other",
+        "agent_processed": "ClassifierAgent",
+        "extracted_data": {},
+        "notes": "Initial classification"
+    }
+]

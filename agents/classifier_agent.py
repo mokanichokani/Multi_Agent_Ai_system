@@ -76,7 +76,7 @@ class ClassifierAgent(BaseAgent):
         prompt = f"""
         Given the following {source_format} content, classify its primary intent.
         Choose one of the following intents: {', '.join(intents)}.
-        If none seem to fit well, choose 'Other' or 'General Inquiry'.
+        If none seem to fit well, choose 'General Inquiry'.
 
         Content:
         ---
