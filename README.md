@@ -8,6 +8,14 @@
 > - 📧 **Automated Email Monitoring** - Real-time IMAP integration for incoming emails
 
 ---
+
+## 🎥 System Demo
+
+[![Multi-Agent AI System Demo](https://img.youtube.com/vi/_QYir-ijlZA/0.jpg)](https://youtu.be/_QYir-ijlZA)
+
+*Click the image above to watch a complete demonstration of the multi-agent AI system in action*
+
+---
  
 This project demonstrates a multi-agent AI system capable of processing inputs in PDF (simulated), JSON, or Email (text) format. It classifies the input format and intent, then routes it to an appropriate specialized agent. The system maintains a shared context for traceability and potential chaining of operations.
 
