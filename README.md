@@ -10,6 +10,23 @@
 ---
  
 This project demonstrates a multi-agent AI system capable of processing inputs in PDF (simulated), JSON, or Email (text) format. It classifies the input format and intent, then routes it to an appropriate specialized agent. The system maintains a shared context for traceability and potential chaining of operations.
+
+## 📸 System Screenshots
+
+### 💻 Command Line Interface
+![CLI Interface](public/1.png)
+*Command-line interface showing direct script execution and agent processing*
+
+### 🌐 Web-based Streamlit Interface
+![Streamlit Dashboard](public/2.png)
+*User-friendly web dashboard with file upload capabilities*
+
+![Streamlit Processing View](public/3.png)
+*Real-time processing results and shared memory visualization*
+
+### 📧 Email Automation Service
+![Email Monitoring](public/4.png)
+*Automated email monitoring and classification system in action*
  
 ## 🏗️ System Overview 
  
@@ -48,6 +65,11 @@ multi_agent_ai_system/
 ├── memory/                    # Shared memory module 
 ├── utils/                     # Utility functions (e.g., LLM interaction) 
 ├── sample_inputs/             # Sample input files for testing 
+├── public/                    # Screenshots and images
+│   ├── 1.png                  # CLI interface screenshot
+│   ├── 2.png                  # Streamlit dashboard screenshot
+│   ├── 3.png                  # Streamlit processing view screenshot
+│   └── 4.png                  # Email automation screenshot
 ├── .env                       # For API keys and email credentials (GITIGNORED) 
 ├── main.py                    # Main CLI script 
 ├── streamlit_app.py           # Streamlit web interface
@@ -119,6 +141,8 @@ python main.py
 
 This runs the basic multi-agent system where you can input data directly through the command line interface.
 
+![CLI Demo](public/1.png)
+
 ### 2. 🌐 Streamlit Web Interface
 
 For a user-friendly web-based interface:
@@ -133,6 +157,9 @@ This will start a local web server (typically at `http://localhost:8501`) where 
 - 👀 View processing results in real-time
 - 📚 Browse shared memory logs
 - 📊 Interactive dashboard for system monitoring
+
+![Streamlit Interface](public/2.png)
+![Processing Results](public/3.png)
 
 ### 3. 📧 Automated Email Monitoring
 
@@ -150,6 +177,8 @@ This script will:
 - 🔄 Run continuously until manually stopped (Ctrl+C)
 
 **Note:** Email monitoring requires proper email credentials in the `.env` file.
+
+![Email Automation](public/4.png)
 
 ## 💡 Usage Examples
 
